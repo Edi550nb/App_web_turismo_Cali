@@ -13,7 +13,13 @@ function toggleLanguage(){
  
 language = language==="en" ? "es" : "en";
 document.querySelectorAll("[data-en]").forEach(element=>{
-element.textContent = element.getAttribute("data-"+language);
+
+const translation = element.getAttribute("data-" + language);
+
+if(translation){
+	element.textContent = translation;
+}
+
 });
 }
 
