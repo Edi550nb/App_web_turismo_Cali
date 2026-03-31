@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature - Cali</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+<header>
+<h1 data-en="Cali Local Experiences" data-es="Experiencias Locales en Cali">
+    Cali Local Experiences
+  </h1>
+
+  <div class="lang-container">
+    <p 
+      data-en="Click the button to change language"
+      data-es="Haz clic en el botón para cambiar el idioma">
+      Click the button to change language
+    </p>
+
+    <button onclick="toggleLanguage()">
+	<p 
+      data-en="Translate"
+      data-es="Traducir">
+      Translate
+    </p>
+	</button>
+  </div>
+</header>
+
+<nav>
+<a href="../index.html"
+	 data-en="Home"
+     data-es="Inicio">Home</a>	   		  
+<a href="events.html"
+	 data-en="Events"
+     data-es="Eventos">Events</a>				  
+<a href="food.html"
+	 data-en="Food"
+     data-es="Gastronía">Food</a>		   					  
+<a href="culture.html"
+	 data-en="Culture"
+     data-es="Cultura">Culture</a>		 		
+</nav>
+
+<section>
+
+<h2 class="section-title"
+data-en="Ecoparks" data-es="Ecoparques">Ecoparks</h2>
+
+<div class="card">
+<img src="../images/cristo_rey.jpg">
+
+<p class="place-title"
+data-en="Christ the King"
+data-es="Cristo Rey">
+Christ the Kinge</p>
+
+<p data-en="The Cristo Rey Ecopark is one of Cali's most emblematic tourist and religious destinations, recently renovated as part of a comprehensive project that seeks to connect the city with its guardian hills."
+data-es="El Ecoparque Cristo Rey es uno de los destinos turísticos y religiosos más emblemáticos de Cali, recientemente renovado como parte de un proyecto integral que busca conectar la ciudad con sus cerros tutelares.">
+The Cristo Rey Ecopark is one of Cali's most emblematic tourist and religious destinations, recently renovated as part of a comprehensive project that seeks to connect the city with its guardian hills.																												
+</p>
+<figcaption>
+      <a href="https://www.cali.gov.co/vivienda/publicaciones/183897/ecoparque-cristo-rey/" target="_blank">
+	  <p data-en="More information"
+	  data-es="Más información">
+        More information</p>
+      </a>
+    </figcaption>
+  <p data-en="Image taken from: "
+	  data-es="Imagen tomada de: ">
+        Image taken from:</p>
+<p class="credit">
+<a href="https://www.infobae.com/colombia/2025/11/17/estos-son-los-nuevos-horarios-para-visitar-el-ecoparque-cristo-rey-y-el-parque-de-la-biodiversidad-para-la-temporada-de-fin-de-ano/" target="_blank">
+https://www.infobae.com/
+</a>
+</p>
+
+
+
+<img src="../images/rio pance.jpg">
+
+<p class="place-title"
+data-en="Biodiversity Ecopark COP16"
+data-es="Ecoparque de la Biodiversidad COP16">
+Biodiversity Ecopark COP16</p>
+
+<p data-en="The COP16 Biodiversity Ecopark (formerly known as Corazón de Pance) is a 92-hectare natural space located in southern Cali, designed as the main environmental legacy of the COP16 summit. This green lung seeks the conservation of species and environmental education through a sustainability model that uses solar energy and rainwater harvesting."
+data-es="El Ecoparque de la Biodiversidad COP16 (anteriormente conocido como Corazón de Pance) es un espacio natural de 92 hectáreas ubicado en el sur de Cali, diseñado como el principal legado ambiental de la cumbre COP16. Este pulmón verde busca la conservación de especies y la educación ambiental mediante un modelo de sostenibilidad que utiliza energía solar y recolección de aguas lluvias.">
+The COP16 Biodiversity Ecopark (formerly known as Corazón de Pance) is a 92-hectare natural space located in southern Cali, designed as the main environmental legacy of the COP16 summit. This "green lung" seeks the conservation of species and environmental education through a sustainability model that uses solar energy and rainwater harvesting.																											
+</p>
+<figcaption>
+      <a href="https://comisionfilmicacolombia.com/locacion/ecoparque-rio-pance/" target="_blank">
+	  <p data-en="More information"
+	  data-es="Más información">
+        More information</p>
+      </a>
+    </figcaption>
+  <p data-en="Image taken from: "
+	  data-es="Imagen tomada de: ">
+        Image taken from:</p>
+<p class="credit">
+<a href="https://90minutos.co/cop16/ecoparque-de-pance-se-expande-y-sera-museo-del-agua-que-traera-esta-transformacion-29-10-2024/" target="_blank">
+https://90minutos.co
+</a>
+</p>
+
+<img src="../images/lago-de-las-garzas-ecosistema.jpg">
+
+<p class="place-title"
+data-en="ecopark lake of the herons"
+data-es="ecoparque lago de las garzas">
+ecopark lake of the herons</p>
+
+<p data-en="The Lago de las Garzas Ecopark is a wetland and natural refuge located in southern Cali, specifically in the Pance sector (Commune 22). It is an ideal space for contemplative ecotourism, relaxation, and environmental education without leaving the city."
+data-es="El Ecoparque Lago de las Garzas es un humedal y refugio natural ubicado en el sur de Cali, específicamente en el sector de Pance (Comuna 22). Es un espacio ideal para el ecoturismo contemplativo, el descanso y la educación ambiental sin salir de la ciudad.">
+The Lago de las Garzas Ecopark is a wetland and natural refuge located in southern Cali, specifically in the Pance sector (Commune 22). It is an ideal space for contemplative ecotourism, relaxation, and environmental education without leaving the city.																											
+</p>
+<figcaption>
+      <a href="https://www.cali.gov.co/dagma/publicaciones/138919/ecoparque-lago-de-las-garzas-cali/" target="_blank">
+	  <p data-en="More information"
+	  data-es="Más información">
+        More information</p>
+      </a>
+    </figcaption>
+  <p data-en="Image taken from: "
+	  data-es="Imagen tomada de: ">
+        Image taken from:</p>
+<p class="credit">
+<a href="https://www.tripadvisor.co/Attraction_Review-g297475-d4915132-Reviews-Ecoparque_de_las_Garzas-Cali_Valle_del_Cauca_Department.html" target="_blank">
+https://www.tripadvisor.co
+</a>
+</p>
+
+
+</div>
+
+</section>
+
+<section>
+<h2 class="section-title"
+data-en="Sights" data-es="Monumentos">Sights</h2>
+
+<div class="card">
+<img src="../images/tres_cruces.jpg">
+
+<p class="place-title"
+data-en="Hill of the Three Crosses"
+data-es="Cerro de las Tres Cruces">
+Hill of the Three Crosses</p>
+
+<p data-en="The Hill of the Three Crosses is one of Cali's most iconic landmarks, located in the western mountain range northwest of the city. It's a favorite destination for Cali residents for sports, hiking, and religious tourism, offering one of the best panoramic views of the Branch of Heaven."
+data-es="El Cerro de las Tres Cruces es uno de los monumentos más emblemáticos de Cali, ubicado en la cordillera occidental al noroeste de la ciudad. Es el destino preferido de los caleños para hacer deporte, senderismo y turismo religioso, ofreciendo una de las mejores vistas panorámicas de la Sucursal del Cielo.">
+The Hill of the Three Crosses is one of Cali's most iconic landmarks, located in the western mountain range northwest of the city. It's a favorite destination for Cali residents for sports, hiking, and religious tourism, offering one of the best panoramic views of the Branch of Heaven.</p>
+
+<figcaption>
+      <a href="https://es.wikipedia.org/wiki/Cerro_de_las_Tres_Cruces" target="_blank">
+	  <p data-en="More information"
+	  data-es="Más información">
+        More information</p>
+      </a>
+    </figcaption>
+  <p data-en="Image taken from: "
+	  data-es="Imagen tomada de: ">
+        Image taken from:</p>
+<p class="credit">
+<a href="https://90minutos.co/cali/cerro-de-las-tres-cruces-tendra-entrada-unica-en-semana-santa-conozca-aqui-el-punto-habilitado-15-04-2025/" target="_blank">
+https://90minutos.co/
+</a>
+</p>
+
+<img src="../images/belalcazar.jpg">
+
+<p class="place-title"
+data-en="Statue of Sebastian de Belalcazar"
+data-es="Estatua de Sebastián de Belalcázar">
+Statue of Sebastian de Belalcazar</p>
+
+<p data-en="The Statue of Sebastián de Belalcázar is one of Cali's most iconic monuments, located on a viewpoint on a hill west of the city that offers a panoramic view of the capital of Valle."
+data-es="La Estatua de Sebastián de Belalcázar es uno de los monumentos más icónicos de Cali, ubicado en un mirador sobre una colina al oeste de la ciudad que ofrece una vista panorámica de la capital del Valle.">
+The Statue of Sebastián de Belalcázar is one of Cali's most iconic monuments, located on a viewpoint on a hill west of the city that offers a panoramic view of the capital of Valle.</p>
+
+<figcaption>
+      <a href="https://www.cali.gov.co/cultura/publicaciones/172542/estatua-de-sebastian-de-belalcazar-volvio-a-su-pedestal/" target="_blank">
+	  <p data-en="More information"
+	  data-es="Más información">
+        More information</p>
+      </a>
+    </figcaption>
+  <p data-en="Image taken from: "
+	  data-es="Imagen tomada de: ">
+        Image taken from:</p>
+<p class="credit">
+<a href="https://www.cali.gov.co/juridica/publicaciones/168141/alcaldia-prepara-instalacion-del-monumento-de-sebastian-de-belalcazar-con-resena-historica-del-conquistador/" target="_blank">
+https://www.cali.gov.co/
+</a>
+</p>
+
+<img src="../images/gato_tejada.jpg">
+
+<p class="place-title"
+data-en="The River Cat"
+data-es="El Gato del Río">
+The River Cat</p>
+
+<p data-en="The River Cat, popularly known as Tejada's Cat, is one of the most iconic sculptures in Cali, Colombia. It was created by the renowned Bogota artist Hernando Tejada and has become a symbol of Cali's identity since its inauguration in July 1996."
+data-es="El Gato del Río, popularmente conocido como el Gato de Tejada, es una de las esculturas más icónicas de Cali, Colombia. Fue creada por el reconocido artista bogotano Hernando Tejada y se ha convertido en un símbolo de la identidad caleña desde su inauguración en julio de 1996.">
+The River Cat, popularly known as Tejada's Cat, is one of the most iconic sculptures in Cali, Colombia. It was created by the renowned Bogota artist Hernando Tejada and has become a symbol of Cali's identity since its inauguration in July 1996.</p>
+
+<figcaption>
+      <a href="https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/" target="_blank">
+	  <p data-en="More information"
+	  data-es="Más información">
+        More information</p>
+      </a>
+    </figcaption>
+  <p data-en="Image taken from: "
+	  data-es="Imagen tomada de: ">
+        Image taken from:</p>
+<p class="credit">
+<a href="https://www.elpais.com.co/cali/el-gato-de-tejada-en-360-una-visita-desde-todos-los-angulos-al-emblematico-monumento-caleno.html" target="_blank">
+https://www.elpais.com.co/
+</a>
+</p>
+
+</div>
+
+</section>
+
+<section>
+  <h2 
+    data-en="Explore Routes"
+    data-es="Explorar Rutas">
+    Explore Routes
+  </h2>
+
+  <div id="map"></div>
+</section>
+
+<footer>
+ 
+  <p 
+    data-en="© 2026 Cali Local Experiences"
+    data-es="© 2026 Experiencias Locales en Cali">
+    2026 Cali Local Experiences
+  </p>
+
+  <p 
+    data-en="Developed by Edisson Barbosa"
+    data-es="Desarrollado por Edisson Barbosa">
+    Developed by Edisson Barbosa
+  </p>
+
+</footer>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="../js/script.js"></script>>
+
+</body>
+</html>
