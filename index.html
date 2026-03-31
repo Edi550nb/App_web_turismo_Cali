@@ -1,339 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cali Local Experiences</title>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cali Local Experiences</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
- 
+
 <body>
+
 <header>
-<h1
-data-en="Cali Local Experiences"
-data-es="Experiencias locales en Cali">
-Cali Local Experiences</h1>
+  <h1 data-en="Cali Local Experiences" data-es="Experiencias Locales en Cali">
+    Cali Local Experiences
+  </h1>
 
-<div class="lang-container">
+  <div class="lang-container">
+    <p 
+      data-en="Click the button to change language"
+      data-es="Haz clic en el botón para cambiar el idioma">
+      Click the button to change language
+    </p>
 
-<p class="lang-text"
-data-en="Change languaje"
-data-es="Cambiar Idioma">
-Change languaje</p>
-
-<button class="lang-toggle" 
-
-data-en="Switch to Spanish"
-data-es="Cambiar a Inglés"
-onclick="toggleLanguage()">Switch to Spanish</button>
+    <button onclick="toggleLanguage()">
+	<p 
+      data-en="🌎 Translate"
+      data-es="🌎 Traducir">
+      🌎 Translate
+    </p>
+	</button>
+  </div>
 </header>
- 
+
 <nav>
+  <a href="html/culture.html"
+     data-en="Culture"
+     data-es="Cultura">Culture</a>
 
-<button 
-data-en="Culture"
-data-es="Cultura"
-onclick="showSection('Culture')">
-Culture
-</button>
+  <a href="html/food.html"
+     data-en="Food"
+     data-es="Comida">Food</a>
 
-<button 
-data-en="Food"
-data-es="Comida"
-onclick="showSection('Food')">
-Food
-</button>
+  <a href="html/nature.html"
+     data-en="Nature"
+     data-es="Naturaleza">Nature</a>
 
-<button 
-data-en="Nature"
-data-es="Naturaleza"
-onclick="showSection('Nature')">
-Nature
-</button>
-
-<button 
-data-en="Events"
-data-es="Eventos"
-onclick="showSection('Events')">
-Events
-</button>
-
+  <a href="html/events.html"
+     data-en="Events"
+     data-es="Eventos">Events</a>
 </nav>
- 
-<!-- Sección cultura -->
- 
-<section id="culture" class="section">
- 
-<h2 data-en="Historic Center" data-es="Centro Histórico">Historic Center</h2>
- 
-<div class="card">
-<figure>
-<img src="images/cayzedo.jpg" alt="Plaza de Cayzedo">
 
-<figcaption class="place-title"
- data-en="Cayzedo Square" data-es="Plaza de Cayzedo">Cayzedo Square</figcaption>
+<section class="hero">
 
- <figcaption class="credit">
-   URL: 
-   <a href="https://viajandox.com.co/cali/plaza-caycedo-A3037"
-   target="_blank">
-   viajandox.com.co
-   </a>
-   </figcaption>
-   </figure>
-<p data-en="It is the historical heart and geographic center of Cali, Colombia. Located between 4th and 5th Avenues and 11th and 12th Streets, it is famous for its iconic, towering date palms and its neoclassical and republican architecture."
-data-es="Es el corazón histórico y centro geográfico de Cali, Colombia. Ubicada entre las carreras 4ª y 5ª y las calles 11 y 12, es famosa por sus icónicas palmeras datileras de gran altura y su arquitectura neoclásica y republicana.">
-It is the historical heart and geographic center of Cali, Colombia. Located between 4th and 5th Avenues and 11th and 12th Streets, it is famous for its iconic, towering date palms and its neoclassical and republican architecture.</p>
-</div>
- 
-<div class="card"> 
-<img src="images/ermita.jpg">
+  <div class="slider">
 
-<figcaption class="place-title"
- data-en="La Ermita Church" data-es="Iglesia La Ermita">La Ermita Church</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://www.colparques.net/ERMITA"
-   target="_blank">
-   Organización Colparques
-   </a>
-   </figcaption>
-<p data-en="Officially known as the Church of Our Lady of Solitude, it is one of the most important architectural and religious landmarks in Cali, Colombia. Located on the banks of the Cali River, this neo-Gothic gem is a must-see for locals and tourists alike, thanks to its historical and visual beauty."
-data-es="Oficialmente conocida como la iglesia de Nuestra Señora de la Soledad, es uno de los símbolos arquitectónicos y religiosos más importantes de Cali, Colombia. Ubicada frente al río Cali, esta joya de estilo neogótico es un punto de encuentro obligado para locales y turistas por su belleza histórica y visual.">
-Officially known as the Church of Our Lady of Solitude, it is one of the most important architectural and religious landmarks in Cali, Colombia. Located on the banks of the Cali River, this neo-Gothic gem is a must-see for locals and tourists alike, thanks to its historical and visual beauty.</p>
-</div>
- 
-<div class="card">
-<img src="images/boulevard.jpg">
+    <div class="slide active" style="background-image: url('./images/boulevard.jpg');"></div>
+    <div class="slide" style="background-image: url('./images/cayzedo.jpg');"></div>
+    <div class="slide" style="background-image: url('./images/feria_cali.jpg');"></div>
+    <div class="slide" style="background-image: url('./images/cristo_rey.jpg');"></div>
+	<div class="slide" style="background-image: url('./images/cholado.jpg');"></div>
+    <div class="slide" style="background-image: url('./images/ermita.jpg');"></div>
+	<div class="slide" style="background-image: url('./images/salsa_festival.jpg');"></div>
+    <div class="slide" style="background-image: url('./images/belalcazar.jpg');"></div>
 
-<figcaption class="place-title"
- data-en="The river boulevard" data-es="El bulevar del río">The river boulevard</figcaption>
+  </div>
 
-<figcaption>
-   URL: 
-   <a href="https://travel.valledelcauca.gov.co/sitio/bulevar-del-rio"
-   target="_blank">
-   travel.valledelcauca.gov.co
-   </a>
-   </figcaption>
-<p data-en="The Bulevar del Río (officially Bulevar de la Avenida Colombia) is the most iconic pedestrian walkway in Cali, Colombia. Inaugurated in 2013, this 980-meter-long space was built over the country's longest urban tunnel to revitalize the area adjacent to the Cali River and transform it into a cultural and tourist hub."
-data-es="El Bulevar del Río (oficialmente Bulevar de la Avenida Colombia) es el corredor peatonal más emblemático de Cali, Colombia. Inaugurado en 2013, este espacio de 980 metros de longitud fue construido sobre el túnel urbano más largo del país para recuperar la zona aledaña al río Cali y convertirla en un punto de encuentro cultural y turístico.">
-The Bulevar del Río (officially Bulevar de la Avenida Colombia) is the most iconic pedestrian walkway in Cali, Colombia. Inaugurated in 2013, this 980-meter-long space was built over the country's longest urban tunnel to revitalize the area adjacent to the Cali River and transform it into a cultural and tourist hub.</p>
-</div>
+  <div class="hero-content">
+    <h2 
+      data-en="Discover Cali"
+      data-es="Descubre Cali">
+      Discover Cali
+    </h2>
+
+    <p 
+      data-en="Explore culture, food, nature and events"
+      data-es="Explora cultura, gastronomía, naturaleza y eventos">
+      Explore culture, food, nature and events
+    </p>
+  </div>
 
 </section>
- 
-<!-- Sección comida-->
- 
-<section id="food" class="section">
-<h2 data-en="Traditional Food" data-es="Comida Tradicional">Traditional Food</h2>
- 
-<div class="card">
-<img src="images/cholado.jpg">
-
-<figcaption class="place-title"
- data-en="Cholado" data-es="Cholado">Cholado</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://caracol.com.co/programa/2022/09/03/el_sabor_de_colombia/1662176127_274412.html"
-   target="_blank">
-   caracol.com.co
-   </a>
-   </figcaption>
-<p data-en="Cholado (or cholao) is the signature dessert of Cali and the Valle del Cauca region. It consists of a refreshing mixture of shaved ice, sweet syrups, a variety of chopped fresh fruit, condensed milk, and optionally, a cookie or ice cream."
-data-es="El cholado (o cholao) es el postre insignia de Cali y el Valle del Cauca. Consiste en una mezcla refrescante de hielo raspado, jarabes dulces (melados), una gran variedad de frutas frescas picadas, leche condensada y, opcionalmente, galleta o helado">
-Cholado (or cholao) is the signature dessert of Cali and the Valle del Cauca region. It consists of a refreshing mixture of shaved ice, sweet syrups, a variety of chopped fresh fruit, condensed milk, and optionally, a cookie or ice cream.</p>
-</div> 
- 
-<div class="card">
-<img src="images/chuleta.jpg">
-
-<figcaption class="place-title"
- data-en="Valley chop" data-es="Chuleta valluna">Valley chop</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://www.elespectador.com/gastronomia-y-recetas/receta-asi-se-prepara-la-chuleta-valluna/"
-   target="_blank">
-   elespectador.com
-   </a>
-   </figcaption>
-<p data-en="The chuleta valluna is one of the most emblematic dishes of the Valle del Cauca region of Colombia. It consists of a cut of pork (usually loin or leg) that is flattened very thinly, marinated with spices, and served breaded and fried."
-data-es="La chuleta valluna es uno de los platos más emblemáticos de la gastronomía del Valle del Cauca, Colombia. Se trata de un corte de cerdo (generalmente lomo o pierna) que se aplana hasta quedar muy delgado, se marina con especias y se sirve apanado y frito.">
-The chuleta valluna is one of the most emblematic dishes of the Valle del Cauca region of Colombia. It consists of a cut of pork (usually loin or leg) that is flattened very thinly, marinated with spices, and served breaded and fried.</p>
-
-</div>
- 
-<div class="card">
-<img src="images/empanadas.jpg">
-
-<figcaption class="place-title"
- data-en="Empanadas" data-es="Empanadas">Empanadas</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://www.rappi.com.co/restaurantes"
-   target="_blank">
-   rappi.com.co
-   </a>
-   </figcaption>
-<p data-en="The empanada is a cultural institution, characterized by its crispy corn dough and its filling of meat with potato."
-data-es="La empanada es una institución cultural, caracterizada por su masa de maíz crujiente y su relleno de carne con papa.">
-The empanada is a cultural institution, characterized by its crispy corn dough and its filling of meat with potato.</p>
 
 
+<section class="card">
+  <h2 
+    data-en="Welcome"
+    data-es="Bienvenido">
+    Welcome
+  </h2>
 
-</div>
- 
+  <p 
+    data-en="This website allows you to discover the best local experiences in Cali, including culture, gastronomy, nature and events."
+    data-es="Este sitio web te permite descubrir las mejores experiencias locales en Cali, incluyendo cultura, gastronomía, naturaleza y eventos.">
+    This website allows you to discover the best local experiences in Cali, including culture, gastronomy, nature and events.
+  </p>
 </section>
- 
-<!-- Sección lugares naturales -->
- 
-<section id="nature" class="section">
- 
-<h2 data-en="Viewpoints" data-es="Miradores">Viewpoints</h2>
- 
-<div class="card">
-<img src="images/cristo_rey.jpg">
 
-<figcaption class="place-title"
- data-en="Christ king" data-es="Cristo Rey">Christ king</figcaption>
+<footer>
  
-<figcaption>
-   URL: 
-   <a href="https://www.elpais.com.co/cali/ecoparque-de-cristo-rey-supera-las-60000-visitas-este-ano-y-se-consolida-como-atractivo-turistico-en-cali-2403.html"
-   target="_blank">
-   elpais.com.co
-   </a>
-   </figcaption>
-<p data-en="The Christ the King Monument is one of Cali's most iconic landmarks, located on Cerro de los Cristales (Hill of Crystals). Recently, the area was transformed into the Cristo Rey Ecopark, a comprehensive project offering ecological trails, viewpoints with 360° views of the city and the Farallones de Cali mountain range, and spaces dedicated to environmental conservation."
-data-es="El Monumento a Cristo Rey es uno de los íconos más representativos de Cali, ubicado en el Cerro de los Cristales. Recientemente, el área se transformó en el Ecoparque Cristo Rey, un proyecto integral que ofrece senderos ecológicos, miradores con vistas de 360° de la ciudad y los Farallones de Cali, y espacios dedicados a la conservación ambiental.">
-The Christ the King Monument is one of Cali's most iconic landmarks, located on Cerro de los Cristales (Hill of Crystals). Recently, the area was transformed into the Cristo Rey Ecopark, a comprehensive project offering ecological trails, viewpoints with 360° views of the city and the Farallones de Cali mountain range, and spaces dedicated to environmental conservation.</p>
+  <p 
+    data-en="© 2026 Cali Local Experiences"
+    data-es="© 2026 Experiencias Locales en Cali">
+    © 2026 Cali Local Experiences
+  </p>
 
-</div>
- 
-<div class="card">
-<img src="images/belalcazar.jpg">
+  <p 
+    data-en="Developed by Edisson Barbosa"
+    data-es="Desarrollado por Edisson Barbosa">
+    Developed by Edisson Barbosa
+  </p>
 
-<figcaption class="place-title"
- data-en="
-Monument to Sebastián de Belalcázar" data-es="Monumento a Sebastián de Belalcázar
-">Monument to Sebastián de Belalcázar</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://www.tripadvisor.co/Attraction_Review-g297475-d6381739-Reviews-Mirador_Sebastian_Belalcazar-Cali_Valle_del_Cauca_Department.html"
-   target="_blank">
-   tripadvisor.co
-   </a>
-   </figcaption>
-<p data-en="The Monument to Sebastián de Belalcázar is one of the most iconic symbols of Cali, Colombia. It is dedicated to the Spanish conquistador who founded the city in 1536."
-data-es="El Monumento a Sebastián de Belalcázar es uno de los símbolos más icónicos de Cali, Colombia. Está dedicado al conquistador español que fundó la ciudad en 1536.">
-The Monument to Sebastián de Belalcázar is one of the most iconic symbols of Cali, Colombia. It is dedicated to the Spanish conquistador who founded the city in 1536.</p>
+</footer>
 
-
-</div>
- 
-<div class="card">
-<img src="images/tres_cruces.jpg">
-
-<figcaption class="place-title"
- data-en="
-Hill of the Three Crosses" data-es="Cerro de las tres cruces
-">Hill of the Three Crosses</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://90minutos.co/cali/cerro-de-las-tres-cruces-tendra-entrada-unica-en-semana-santa-conozca-aqui-el-punto-habilitado-15-04-2025/"
-   target="_blank">
-   90minutos.co
-   </a>
-   </figcaption>
-<p data-en="The Cerro de las Tres Cruces (Hill of the Three Crosses) is one of Cali's most iconic natural landmarks and viewpoints, located at 1,480 meters above sea level in the Western Cordillera. It is a favorite destination for Cali residents to hike, play sports, and enjoy panoramic views of the entire city."
-data-es="El Cerro de las Tres Cruces es uno de los monumentos y miradores naturales más emblemáticos de Cali, ubicado a 1,480 msnm en la cordillera occidental. Es el destino preferido de los caleños para hacer senderismo, deporte y disfrutar de una vista panorámica de toda la ciudad.">
-The Cerro de las Tres Cruces (Hill of the Three Crosses) is one of Cali's most iconic natural landmarks and viewpoints, located at 1,480 meters above sea level in the Western Cordillera. It is a favorite destination for Cali residents to hike, play sports, and enjoy panoramic views of the entire city.</p>
-
-
-
-</div>
- 
-</section>
- 
-<!-- Eventos Cali -->
- 
-<section id="events" class="section">
-
-<h2 data-en="Festivals" data-es="Festivales">Festivals</h2>
- 
-<div class="card">
-<img src="images/feria_cali.jpg">
-
-<figcaption class="place-title"
- data-en="Cali Fair" data-es="Feria de Cali">Cali Fair</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://feriadecali.com.co/salsodromo-2024-rescata-el-origen-la-tradicion-y-la-identidad-calena-en-la-version-67-feria-de-cali/"
-   target="_blank">
-   feriadecali.com.co
-   </a>
-   </figcaption>
-<p data-en="The Cali Fair, also known as the Sugarcane Fair, is the most important cultural and festive event in Santiago de Cali, Colombia. It is celebrated annually from December 25th to 30th and is a symbol of Cali's identity, distinguished by its passion for salsa, joy, and diversity."
-data-es="La Feria de Cali, conocida también como la Feria de la Caña, es el evento cultural y festivo más importante de Santiago de Cali, Colombia. Se celebra anualmente del 25 al 30 de diciembre y es un símbolo de la identidad caleña que destaca por su pasión por la salsa, la alegría y la diversidad.">
-The Cali Fair, also known as the Sugarcane Fair, is the most important cultural and festive event in Santiago de Cali, Colombia. It is celebrated annually from December 25th to 30th and is a symbol of Cali's identity, distinguished by its passion for salsa, joy, and diversity.</p>
-
-
-</div>
- 
-<div class="card">
-<img src="images/salsa_festival.jpg">
-
-<figcaption class="place-title"
- data-en="International Salsa Festival" data-es="Festival internacional de la Salsa">International Salsa Festival</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://www.cali.gov.co/boletines/publicaciones/188669/inicia-el-camino-hacia-el-festival-mundial-de-salsa-2025-con-las-clasificatorias-locales-y-el-concurso-infantil/"
-   target="_blank">
-   cali.gov.co
-   </a>
-   </figcaption>
-<p data-en="The Cali World Salsa Festival 2026 (formerly known as the International Salsa Festival) will be held from September 24 to 27, 2026. This event is considered the most important salsa gathering in the world, bringing together dancers, musicians, and music lovers in the World Capital of Salsa."
-data-es="El Festival Mundial de Salsa de Cali 2026 (anteriormente conocido como Festival Internacional de la Salsa) se celebrará del 24 al 27 de septiembre de 2026. Este evento es considerado el encuentro de salsa más importante del mundo, reuniendo a bailarines, músicos y melómanos en la Capital Mundial de la Salsa.">
-The Cali World Salsa Festival 2026 (formerly known as the International Salsa Festival) will be held from September 24 to 27, 2026. This event is considered the most important salsa gathering in the world, bringing together dancers, musicians, and music lovers in the World Capital of Salsa.</p>
-
-</div>
- 
-<div class="card">
-<img src="images/film_festival.jpg">
-
-<figcaption class="place-title"
- data-en="Cali International Film Festival" data-es="Festival Internacional de cine de Cali">Cali International Film Festival</figcaption>
- 
-<figcaption>
-   URL: 
-   <a href="https://anafe.co/asociados/festival-internacional-de-cine-de-cali/"
-   target="_blank">
-   anafe.co
-   </a>
-   </figcaption>
-<p data-en="The Cali International Film Festival (FICCali) is the most important film event in southwestern Colombia. The most recent edition (the 17th) took place from October 21 to 26, 2025, under the theme Cinema to Connect."
-data-es="El Festival Internacional de Cine de Cali (FICCali) es el evento cinematográfico más importante del suroccidente colombiano. La edición más reciente (la número 17) se llevó a cabo del 21 al 26 de octubre de 2025 bajo el lema Cine para encontrarnos.">
-The Cali International Film Festival (FICCali) is the most important film event in southwestern Colombia. The most recent edition (the 17th) took place from October 21 to 26, 2025, under the theme Cinema to Connect."</p>
-
-
-</div>
- 
-</section>
- 
-<div id="map"></div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="js/script.js"></script>
- 
+
 </body>
- 
 </html>
