@@ -21,6 +21,7 @@ body{
 }
 
 header{
+  position:relative;
   background: var(--azul);
   color:white;
   text-align:center;
@@ -90,27 +91,32 @@ nav a:hover{
 
 .menu-toggle{
   display:none;
-  font-size:24px;
+  font-size:28px;
   cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  color:white;
+  z-index:1000;
 }
 
 @media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
   nav{
     display:none;
     flex-direction:column;
+    width:100%;
+    text-align:center;
   }
 
   nav.active{
     display:flex;
   }
 
-  .menu-toggle{
-    display:block;
-    text-align:center;
-    padding:10px;
-    background:#222;
-    color:white;
-  }
 }
 
 .hero{
