@@ -1,3 +1,4 @@
+
 function showSection(id){
 
   const sections = document.querySelectorAll(".section");
@@ -92,14 +93,12 @@ function initMapNature(){
     { coords: [3.4525, -76.5335], name: "El Gato del Río" }
   ];
 
-  // Marcadores
   locations.forEach(place => {
     L.marker(place.coords)
       .addTo(map)
       .bindPopup(`<b>${place.name}</b>`);
   });
 
-  // Ruta (opcional)
   const route = locations.map(place => place.coords);
 
   L.polyline(route, {
@@ -108,30 +107,9 @@ function initMapNature(){
     opacity: 0.8
   }).addTo(map);
 
-  // Ajustar vista automáticamente
   map.fitBounds(route);
 
 }
-
-
-document.addEventListener("DOMContentLoaded", function(){
-
-  initSlider();
-
- const path = window.location.pathname;
-
-  if(path.includes("culture")){
-    initMapCulture();
-  } 
-  else if(path.includes("nature")){
-    initMapNature();
-  } 
-  else {
-    initMap(); // opcional (index u otros)
-  }
-
-});
-
 
 function initSlider(){
 
@@ -157,7 +135,29 @@ function initSlider(){
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  initMap();
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navbar = document.getElementById("navbar");
+
+  if(menuToggle && navbar){
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  }
+
   initSlider();
+
+  const path = window.location.pathname;
+
+  if(path.includes("culture")){
+    initMapCulture();
+  } 
+  else if(path.includes("nature")){
+    initMapNature();
+  } 
+  else{
+    if(typeof initMap === "function"){
+      initMap(); // opcional
+    }
+  }
 
 });
