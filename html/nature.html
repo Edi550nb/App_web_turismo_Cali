@@ -6,6 +6,7 @@
 <title>Nature - Cali</title>
 <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -35,17 +36,24 @@
 
 <nav>
 <a href="../index.html"
-	 data-en="Home"
-     data-es="Inicio">Home</a>	   		  
-<a href="events.html"
-	 data-en="Events"
-     data-es="Eventos">Events</a>				  
-<a href="food.html"
-	 data-en="Food"
-     data-es="Gastronía">Food</a>		   					  
-<a href="culture.html"
-	 data-en="Culture"
-     data-es="Cultura">Culture</a>		 		
+     data-en="Home"
+     data-es="Inicio">Home</a>
+
+  <a href="culture.html"
+     data-en="Culture"
+     data-es="Cultura">Culture</a>
+
+  <a href="food.html"
+     data-en="Food"
+     data-es="Comida">Food</a>
+
+  <a href="nature.html"
+     data-en="Nature"
+     data-es="Naturaleza">Nature</a>
+
+  <a href="events.html"
+     data-en="Events"
+     data-es="Eventos">Events</a>		 		
 </nav>
 
 <section>
@@ -54,7 +62,7 @@
 data-en="Ecoparks" data-es="Ecoparques">Ecoparks</h2>
 
 <div class="card">
-<img src="../images/cristo_rey.jpg">
+<img src="../images/cristo_rey.jpg" alt="Cristo Rey)">
 
 <p class="place-title"
 data-en="Christ the King"
@@ -83,7 +91,7 @@ https://www.infobae.com/
 
 
 
-<img src="../images/rio pance.jpg">
+<img src="../images/rio pance.jpg" alt="Ecoparque de la Biodiversidad COP16">
 
 <p class="place-title"
 data-en="Biodiversity Ecopark COP16"
@@ -110,7 +118,7 @@ https://90minutos.co
 </a>
 </p>
 
-<img src="../images/lago-de-las-garzas-ecosistema.jpg">
+<img src="../images/lago-de-las-garzas-ecosistema.jpg" alt="ecoparque lago de las garzas">
 
 <p class="place-title"
 data-en="ecopark lake of the herons"
@@ -147,7 +155,7 @@ https://www.tripadvisor.co
 data-en="Sights" data-es="Monumentos">Sights</h2>
 
 <div class="card">
-<img src="../images/tres_cruces.jpg">
+<img src="../images/tres_cruces.jpg" alt="Cerro de las Tres Cruces">
 
 <p class="place-title"
 data-en="Hill of the Three Crosses"
@@ -174,7 +182,7 @@ https://90minutos.co/
 </a>
 </p>
 
-<img src="../images/belalcazar.jpg">
+<img src="../images/belalcazar.jpg" alt="Estatua de Sebastián de Belalcázar">
 
 <p class="place-title"
 data-en="Statue of Sebastian de Belalcazar"
@@ -201,7 +209,7 @@ https://www.cali.gov.co/
 </a>
 </p>
 
-<img src="../images/gato_tejada.jpg">
+<img src="../images/gato_tejada.jpg" alt="El Gato del Río">
 
 <p class="place-title"
 data-en="The River Cat"
@@ -238,6 +246,12 @@ https://www.elpais.com.co/
     data-es="Explorar Rutas">
     Explore Routes
   </h2>
+  
+    <p class="map-instruction"
+     data-en="Drag to explore the map or click on the markers"
+     data-es="Desliza para explorar el mapa o selecciona los marcadores">
+    Desliza para explorar el mapa o selecciona los marcadores.
+  </p>
 
   <div id="map"></div>
 </section>
