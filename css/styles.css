@@ -4,8 +4,15 @@
   box-sizing:border-box;
 }
 
+:root{
+  --verde:#00a859;
+  --azul:#0072ce;
+  --rojo:#d52b1e;
+  --blanco:#ffffff;
+}
+
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background:#f4f6f8;
   color:#333;
   display:flex;
@@ -14,7 +21,7 @@ body{
 }
 
 header{
-  background: linear-gradient(135deg, #ff6b00, #ff9a3c);
+  background: var(--azul);
   color:white;
   text-align:center;
   padding:25px 15px;
@@ -23,6 +30,11 @@ header{
 
 header h1{
   font-size:28px;
+}
+
+section h2::after {
+  width: 60px;
+  height: 4px;
 }
 
 .lang-container{
@@ -39,7 +51,7 @@ header h1{
 
 .lang-container button{
   background:#fff;
-  color:#ff6b00;
+  color:var(--rojo);
   border:none;
   padding:10px 20px;
   border-radius:25px;
@@ -58,10 +70,11 @@ nav{
   display:flex;
   justify-content:center;
   gap:20px;
-  background:#222;
+  background: var(--verde);
   padding:10px;
   flex-wrap:wrap;
 }
+
 
 nav a{
   color:white;
@@ -72,10 +85,34 @@ nav a{
 }
 
 nav a:hover{
-  background:#ff6b00;
+  background: var(--azul);
 }
 
-/* HERO */
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  nav{
+    display:none;
+    flex-direction:column;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+    text-align:center;
+    padding:10px;
+    background:#222;
+    color:white;
+  }
+}
+
 .hero{
   width:100%;
   display:flex;
@@ -117,6 +154,10 @@ nav a:hover{
   background:rgba(0,0,0,0.35);
   top:0;
   left:0;
+}
+
+.slide:first-child {
+  opacity: 1;
 }
 
 .hero-content{
@@ -166,7 +207,7 @@ nav + section{
   display:block;
   width:60px;
   height:4px;
-  background:#ff6b00;
+  background: var(--rojo);
   margin:10px auto 0;
   border-radius:2px;
 }
@@ -195,7 +236,7 @@ nav + section{
   font-weight:bold;
   font-size:18px;
   margin:10px 0;
-  color:#ff6b00;
+  color:var(--rojo);
 }
 
 .card p{
@@ -203,7 +244,6 @@ nav + section{
   margin-bottom:10px;
 }
 
-/* LINKS */
 .info-link{
   margin-top:10px;
 }
@@ -241,8 +281,15 @@ nav + section{
   box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
+.map-instruction{
+  text-align:center;
+  font-size:14px;
+  color:#666;
+  margin-bottom:10px;
+}
+
 footer{
-  background:#111;
+  background: var(--verde);
   color:white;
   text-align:center;
   padding:20px;
